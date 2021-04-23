@@ -16,7 +16,7 @@ Create a new project called ocp-backup-etcd
 
 ### Privileged permissions
 
-Grant access to the **privileged** scc to the service account **openshift-backup** running the Cronjob deploy through CLI.
+Grant access to the **privileged** scc to the service account **openshift-backup** running the Cronjob.
 
 `oc adm policy add-scc-to-user privileged -z openshift-backup`
 
