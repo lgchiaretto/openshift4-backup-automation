@@ -71,7 +71,7 @@ spec:
             runAsUser: 1000670000
             privileged: true
           terminationGracePeriodSeconds: 30
-          activeDeadlineSeconds: 500
+          activeDeadlineSeconds: 600
           dnsPolicy: "ClusterFirst"
           serviceAccountName: "openshift-backup"
           serviceAccount: "openshift-backup"
