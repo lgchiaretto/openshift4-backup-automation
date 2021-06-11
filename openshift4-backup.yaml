@@ -67,9 +67,6 @@ spec:
                 - "-c"
                 - oc get no -l node-role.kubernetes.io/master --no-headers -o name | xargs -I {} --  oc debug {} -- bash -c 'chroot /host sudo -E /usr/local/bin/cluster-backup.sh /home/core/backup/ && chroot /host sudo -E find /home/core/backup/ -type f -mmin +"1" -delete'
           restartPolicy: "Never"
-          securityContext:
-            runAsUser: 1000670000
-            privileged: true
           terminationGracePeriodSeconds: 30
           activeDeadlineSeconds: 600
           dnsPolicy: "ClusterFirst"
