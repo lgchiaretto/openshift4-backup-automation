@@ -61,7 +61,7 @@ spec:
         spec:
           containers:
             - name: backup
-              image: "registry.redhat.io/openshift4/ose-cli:v4.7"
+              image: "registry.redhat.io/openshift4/ose-cli:v4.8"
               command:
                 - "/bin/bash"
                 - "-c"
