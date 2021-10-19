@@ -2,7 +2,7 @@
 
 This tool was built to automate the steps to create an Openshift 4 backup described on https://docs.openshift.com/container-platform/4.8/backup_and_restore/backing-up-etcd.html#backup-etcd
 
-Cronjob **openshift-backup** resource  will be created and scheduled to run at 11:56 PM and keep last 3 days on backup's directory. All files with more than 3 days will be removed from the backups directory.
+Cronjob **openshift-backup** resource  will be created and scheduled to run at 11:56 PM (GMT) and keep last 3 days on backup's directory. All files with more than 3 days will be removed from the backups directory.
 
 ### Prerequesites
 
