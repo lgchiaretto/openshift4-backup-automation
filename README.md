@@ -4,12 +4,6 @@ This tool was built to automate the steps to create an Openshift 4 backup descri
 
 Cronjob **openshift-backup** resource  will be created and scheduled to run at 11:56 PM (GMT) and keep last 3 days on backup's directory. All files with more than 3 days will be removed from the backups directory.
 
-### Prerequesites
-
-Create a new project called ocp-backup-etcd
-
-`oc new-project ocp-backup-etcd --description "Openshift Backup Automation Tool"` 
-
 ### Apply yaml to create Openshift resources
 
 `oc apply -f openshift4-backup.yaml`
