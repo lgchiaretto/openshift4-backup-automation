@@ -48,7 +48,7 @@ roleRef:
   name: cluster-etcd-backup
 ---
 kind: CronJob
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 metadata:
   name: openshift-backup
   namespace: ocp-backup-etcd
