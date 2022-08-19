@@ -7,10 +7,3 @@ Cronjob **openshift-backup** resource  will be created and scheduled to run at 1
 ### Apply yaml to create Openshift resources
 
 `oc apply -f openshift4-backup.yaml`
-
-### Privileged permissions
-
-Grant access to the **privileged** scc to the service account **openshift-backup** running the Cronjob.
-
-`oc adm policy add-scc-to-user privileged -z openshift-backup -n ocp-backup-etcd`
-
