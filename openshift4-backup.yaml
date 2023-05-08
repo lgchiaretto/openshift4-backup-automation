@@ -4,6 +4,9 @@ metadata:
   name: ocp-backup-etcd
   labels:
     app: openshift-backup
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/warn: privileged
   annotations:
     openshift.io/node-selector: ''
 ---
@@ -28,6 +31,7 @@ rules:
   verbs: ["get", "list"]
 - apiGroups: [""] 
   resources: 
+     - "namespaces"
      - "pods" 
      - "pods/log" 
   verbs: ["get", "list", "create", "delete", "watch"]
@@ -86,7 +90,9 @@ spec:
         spec:
           containers:
             - name: backup
-              image: "registry.redhat.io/openshift4/ose-cli:v4.10"
+              image: "registry.redhat.io/openshift4/ose-cli:v4.12"
+              securityContext:
+                privileged: true
               command:
                 - "/bin/bash"
                 - "-c"
